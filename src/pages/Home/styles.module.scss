@@ -1,0 +1,11 @@
+.catalogs-cards-list {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 9px;
+  row-gap: 25px;
+  padding: 25px 15px 0;
+}

@@ -1,0 +1,40 @@
+header {
+  background-color: #2e2e2e;
+  color: #bdbdbd;
+  padding: 3px 0;
+  font-size: 15px;
+}
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 127px;
+  &__item {
+    &.active-item {
+      color: #688ac9;
+    }
+  }
+}
+
+.header__authorization {
+  display: flex;
+  align-items: center;
+}
+
+.header__login-icon {
+  display: block;
+  width: 16px;
+  height: 34px;
+  background: url("./../../assets/icons/login.svg") center center / contain
+    no-repeat;
+  margin-right: 6px;
+}

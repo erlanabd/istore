@@ -1,0 +1,21 @@
+.item-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:hover {
+    color: #608dd2;
+  }
+  .styled-svg:hover {
+    filter: invert(52%) sepia(98%) saturate(262%) hue-rotate(176deg)
+      brightness(84%) contrast(92%);
+    transition: 0.1s;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
