@@ -1,7 +1,8 @@
 import React from "react";
+import BtnArrow from "./../../../components/arrow-btn/index";
+import BoxLayout from "../../../components/box-layout";
 
 import styles from "./styles.module.scss";
-import BoxLayout from "../../../components/box-layout";
 
 const CatalogsCard = (props) => {
   const { title, description, image } = props;
@@ -15,7 +16,7 @@ const CatalogsCard = (props) => {
         <div className={styles["card-image-wrap"]}>
           <img className={styles["card-image"]} src={image} alt={title} />
         </div>
-        <button className={styles["card-btn"]}>выбрать</button>
+        <BtnArrow title={"выбрать"} />
       </div>
     </BoxLayout>
   );

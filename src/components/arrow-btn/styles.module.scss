@@ -1,0 +1,17 @@
+.btn-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5e8bce;
+  cursor: pointer;
+  &::after {
+    display: block;
+    content: url("./../../assets/icons/btn-arrow.svg");
+    width: 11px;
+    height: 14px;
+  }
+}
