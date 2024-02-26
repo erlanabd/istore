@@ -1,0 +1,28 @@
+.main-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+  padding: 0 15px;
+}
+
+.title {
+  color: #1d1d1f;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.sub-title {
+  display: block;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  color: #828282;
+  margin: 8px 0;
+}
+
+.btn {
+  position: static;
+}

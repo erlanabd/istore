@@ -15,11 +15,34 @@ import catalogsSliderApplewatchUltra2 from "./../../assets/images/catalogs-slide
 import catalogsSliderMacBookM3 from "./../../assets/images/catalogs-slider-macbook-m3.webp";
 import catalogsSliderVisionPro from "./../../assets/images/catalogs-slider-vision-pro.webp";
 
+import iphoneCardIphone15ProMax from "./../../assets/images/iphone-card-iphone-15-pro-max.webp";
+import iphoneCardIphone15Pro from "./../../assets/images/iphone-card-iphone-15-pro.webp";
+import iphoneCardIphone15Plus from "./../../assets/images/iphone-card-iphone-15-plus.webp";
+import iphoneCardIphone15 from "./../../assets/images/iphone-card-iphone-15.webp";
+import iphoneCardIphone14Plus from "./../../assets/images/iphone-card-iphone-14-plus.webp";
+import iphoneCardIphone14 from "./../../assets/images/iphone-card-iphone-14.webp";
+import iphoneCardIphone13 from "./../../assets/images/iphone-card-iphone-13.webp";
+import iphoneCardIphone12 from "./../../assets/images/iphone-card-iphone-12.webp";
+
+import garminCardMarqAviatorGen2 from "./../../assets/images/garmin-card-marq-aviator-gen2.webp";
+import garminCardMarqCaptainGen2 from "./../../assets/images/garmin-card-marq-captain-gen2.webp";
+import garminCardMarqGolferGen2 from "./../../assets/images/garmin-card-marq-golfer-gen2.webp";
+
+import macCardIpadPro from "./../../assets/images/mac-card-ipad-pro.webp";
+import macCardMacBookAir15 from "./../../assets/images/mac-card-macbook-air-15.webp";
+import macCardIstoreCard from "./../../assets/images/mac-card-istore-card.webp";
+import macCardAirpodsPro from "./../../assets/images/mac-card-airpods-pro.webp";
+
 import PromoSlider from "../../components/promo-slider";
 import CatalogsCard from "./catalogs-card";
 import CatalogsSlider from "./catalogs-slider";
+import MainTitle from "../../components/main-title";
+import IphoneCard from "./iphone-card";
+import GarminCard from "./garmin-card";
+import MacCard from "./mac-card";
 
 import clsx from "clsx";
+import common from "./../../assets/styles/common.module.scss";
 import styles from "./styles.module.scss";
 
 const CATALOGS_CARD_DATA = [
@@ -109,6 +132,98 @@ const CATALOGS_SLIDER_CARDS_DATA = [
     description: "Добро пожаловать в эпоху пространственных вычислений",
     image: catalogsSliderVisionPro,
     more: true,
+  },
+];
+
+const IPHONE_CARDS_DATA = [
+  {
+    id: "0",
+    title: "iPhone 15 Pro Max",
+    image: iphoneCardIphone15ProMax,
+  },
+  {
+    id: "1",
+    title: "iPhone 15 Pro",
+    image: iphoneCardIphone15Pro,
+  },
+  {
+    id: "2",
+    title: "iPhone 15 Plus",
+    image: iphoneCardIphone15Plus,
+  },
+  {
+    id: "3",
+    title: "iPhone 15",
+    image: iphoneCardIphone15,
+  },
+  {
+    id: "4",
+    title: "iPhone 14 Plus",
+    image: iphoneCardIphone14Plus,
+  },
+  {
+    id: "5",
+    title: "iPhone 14",
+    image: iphoneCardIphone14,
+  },
+  {
+    id: "6",
+    title: "iPhone 13",
+    image: iphoneCardIphone13,
+  },
+  {
+    id: "7",
+    title: "iPhone 12",
+    image: iphoneCardIphone12,
+  },
+];
+
+const GARMINS_CARD_DATA = [
+  {
+    id: "0",
+    title: "MARQ® Aviator (Gen 2)",
+    image: garminCardMarqAviatorGen2,
+  },
+  {
+    id: "1",
+    title: "MARQ® Captain (Gen 2)",
+    image: garminCardMarqCaptainGen2,
+  },
+  {
+    id: "2",
+    title: "MARQ® Golfer (Gen 2)",
+    image: garminCardMarqGolferGen2,
+  },
+];
+
+const MACS_CARD_DATA = [
+  {
+    id: "0",
+    title: "iPad Pro",
+    subTitle: "Суперсила чипа М2",
+    mainBg: macCardIpadPro,
+    bgDark: true,
+  },
+  {
+    id: "1",
+    title: "MacBook Air 15”",
+    subTitle: "Впечатляюще большой. Невероятно тонкий",
+    mainBg: macCardMacBookAir15,
+    bgDark: false,
+  },
+  {
+    id: "2",
+    title: "iStore Card",
+    subTitle: "Получите до 2% кэшбека с каждой покупки",
+    mainBg: macCardIstoreCard,
+    bgDark: false,
+  },
+  {
+    id: "3",
+    title: "Airpods Pro",
+    subTitle: "Адаптивный звук",
+    mainBg: macCardAirpodsPro,
+    bgDark: true,
   },
 ];
 
@@ -207,6 +322,71 @@ const Home = () => {
         <button className={rightBtnClasses} onClick={handleScrollRight}>
           <i className={clsx(styles["icon"], styles["right-icon"])}></i>
         </button>
+      </section>
+      <section className={styles["iphone-cards"]}>
+        <div
+          className={clsx(common.container, styles["iphone-cards__container"])}
+        >
+          <MainTitle
+            title={"Выберите свой iPhone"}
+            subTitle={"Сравните все модели iPhone"}
+            btnTitle={"больше моделей"}
+          />
+          <div className={styles["iphone-cards__list"]}>
+            {IPHONE_CARDS_DATA.map((item, idx) => {
+              return (
+                <IphoneCard
+                  key={item.id}
+                  title={item.title}
+                  image={item.image}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section className={styles["garmins-cards"]}>
+        <div
+          className={clsx(common.container, styles["garmin-cards__container"])}
+        >
+          <MainTitle
+            title={"Garmin"}
+            subTitle={"MARQ™ COLLECTION"}
+            btnTitle={"все гаджеты"}
+          />
+          <div className={styles["garmin-cards__list"]}>
+            {GARMINS_CARD_DATA.map((item, idx) => {
+              return (
+                <GarminCard
+                  key={item.id}
+                  title={item.title}
+                  image={item.image}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section className={styles["mac-cards"]}>
+        <div className={styles["mac-cards__container"]}>
+          <MainTitle
+            title={"Выберите свой Mac"}
+            subTitle={"Суперсила Проффесионалов"}
+            btnTitle={"подробнее"}
+          />
+          <div className={styles["mac-cards__list"]}>
+            {MACS_CARD_DATA.map((item, idx) => {
+              return (
+                <MacCard
+                  title={item.title}
+                  subtitle={item.subTitle}
+                  mainBg={item.mainBg}
+                  bgDark={item.bgDark}
+                />
+              );
+            })}
+          </div>
+        </div>
       </section>
     </section>
   );

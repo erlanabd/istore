@@ -1,0 +1,37 @@
+.garmin-card-wrap {
+  width: 360px;
+  height: 313px;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+.content {
+  padding: 20px 25px;
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+  }
+  .image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    padding: 8px 0 24px;
+    .image {
+      width: 187px;
+      height: 187px;
+    }
+  }
+  .btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      position: static;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}

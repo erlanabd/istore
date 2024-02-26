@@ -13,13 +13,12 @@
 .catalogs-sliders-wrap {
   position: relative;
   overflow: hidden;
-  padding: 25px 0;
 }
 
 .catalogs-sliders {
   width: 100%;
   overflow-x: scroll;
-  padding: 50px 0;
+  padding-top: 70px;
   &::-webkit-scrollbar {
     width: 0;
   }
@@ -67,4 +66,47 @@
     transform: scale(0.5);
     pointer-events: none;
   }
+}
+
+.iphone-cards {
+  padding: 24px 15px;
+}
+
+.iphone-cards__container {
+  padding: 24px 15px;
+}
+
+.iphone-cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.garmins-cards {
+  @extend .iphone-cards;
+}
+
+.garmins-cards__container {
+  @extend .iphone-cards__container;
+}
+
+.garmin-cards__list {
+  @extend .iphone-cards__list;
+}
+
+.mac-cards {
+  padding-top: 24px;
+}
+
+.mac-cards__container {
+  padding: 24px 0;
+}
+
+.mac-cards__list {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-areas: "";
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 12px;
 }

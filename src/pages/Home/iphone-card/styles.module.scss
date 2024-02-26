@@ -1,0 +1,36 @@
+.iphone-card-wrap {
+  width: 265px;
+  height: 353px;
+  margin: 16px 10px 0;
+  padding: 20px 25px;
+}
+
+.title-box-wrap {
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+  }
+  .btn {
+    position: static;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+.image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 215px;
+  height: 253px;
+  padding: 8px 0 24px;
+  .image {
+    max-height: 221px;
+    max-width: 187px;
+    width: 100%;
+    height: auto;
+  }
+}
