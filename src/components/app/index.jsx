@@ -13,6 +13,8 @@ import CatalogList from "../catalog-list";
 import Home from "../../pages/Home";
 
 import styles from "./styles.module.scss";
+import Footer from "../footer";
+import FooterCopyright from "../footer-copyright";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path={"/contacts"} element={<Contacts />} />
         <Route path={"/accounts/login"} element={<Login />} />
       </Routes>
+      <Footer />
+      <FooterCopyright />
     </div>
   );
 }

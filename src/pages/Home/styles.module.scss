@@ -110,3 +110,15 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 0 12px;
 }
+
+.article-card {
+  @extend .iphone-cards;
+}
+
+.articles-and-news-container {
+  @extend .iphone-cards__container;
+}
+
+.articles-and-news-card__list {
+  @extend .iphone-cards__list;
+}

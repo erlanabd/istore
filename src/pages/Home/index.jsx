@@ -25,13 +25,15 @@ import iphoneCardIphone13 from "./../../assets/images/iphone-card-iphone-13.webp
 import iphoneCardIphone12 from "./../../assets/images/iphone-card-iphone-12.webp";
 
 import garminCardMarqAviatorGen2 from "./../../assets/images/garmin-card-marq-aviator-gen2.webp";
-import garminCardMarqCaptainGen2 from "./../../assets/images/garmin-card-marq-captain-gen2.webp";
-import garminCardMarqGolferGen2 from "./../../assets/images/garmin-card-marq-golfer-gen2.webp";
+import garminCardMarqAthleteCarbonGen2 from "./../../assets/images/garmin-card-marq-athlete-carbon-gen2.webp";
+import garminCardMarqGolferCarbonGen2 from "./../../assets/images/garmin-card-marq-golfer-carbon-gen2.webp";
 
 import macCardIpadPro from "./../../assets/images/mac-card-ipad-pro.webp";
 import macCardMacBookAir15 from "./../../assets/images/mac-card-macbook-air-15.webp";
 import macCardIstoreCard from "./../../assets/images/mac-card-istore-card.webp";
 import macCardAirpodsPro from "./../../assets/images/mac-card-airpods-pro.webp";
+
+import articleCardFastStart from "./../../assets/images/article-card-fast-start.webp";
 
 import PromoSlider from "../../components/promo-slider";
 import CatalogsCard from "./catalogs-card";
@@ -44,6 +46,7 @@ import MacCard from "./mac-card";
 import clsx from "clsx";
 import common from "./../../assets/styles/common.module.scss";
 import styles from "./styles.module.scss";
+import ArticleCard from "./article-card";
 
 const CATALOGS_CARD_DATA = [
   {
@@ -181,18 +184,18 @@ const IPHONE_CARDS_DATA = [
 const GARMINS_CARD_DATA = [
   {
     id: "0",
-    title: "MARQ® Aviator (Gen 2)",
-    image: garminCardMarqAviatorGen2,
+    title: "MARQ® Golfer Carbon (Gen 2)",
+    image: garminCardMarqGolferCarbonGen2,
   },
   {
     id: "1",
-    title: "MARQ® Captain (Gen 2)",
-    image: garminCardMarqCaptainGen2,
+    title: "MARQ® Athlete Carbon (Gen 2)",
+    image: garminCardMarqAthleteCarbonGen2,
   },
   {
     id: "2",
-    title: "MARQ® Golfer (Gen 2)",
-    image: garminCardMarqGolferGen2,
+    title: "MARQ® Aviator (Gen 2)",
+    image: garminCardMarqAviatorGen2,
   },
 ];
 
@@ -224,6 +227,33 @@ const MACS_CARD_DATA = [
     subTitle: "Адаптивный звук",
     mainBg: macCardAirpodsPro,
     bgDark: true,
+  },
+];
+
+const ARTICLES_AND_NEWS_CARD_DATA = [
+  {
+    id: "0",
+    date: "15.12.20",
+    title: "Функция «Быстрое начало»",
+    image: articleCardFastStart,
+    description:
+      "Использование функции «Быстрое начало» для переноса данных на новое устройство iPhone, iPad или iPod touch",
+  },
+  {
+    id: "0",
+    date: "15.12.20",
+    title: "Функция «Быстрое начало»",
+    image: articleCardFastStart,
+    description:
+      "Использование функции «Быстрое начало» для переноса данных на новое устройство iPhone, iPad или iPod touch",
+  },
+  {
+    id: "0",
+    date: "15.12.20",
+    title: "Функция «Быстрое начало»",
+    image: articleCardFastStart,
+    description:
+      "Использование функции «Быстрое начало» для переноса данных на новое устройство iPhone, iPad или iPod touch",
   },
 ];
 
@@ -378,10 +408,38 @@ const Home = () => {
             {MACS_CARD_DATA.map((item, idx) => {
               return (
                 <MacCard
+                  key={item.id}
                   title={item.title}
                   subtitle={item.subTitle}
                   mainBg={item.mainBg}
                   bgDark={item.bgDark}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section className={styles["articles-and-news"]}>
+        <div
+          className={clsx(
+            common.container,
+            styles["articles-and-news-container"]
+          )}
+        >
+          <MainTitle
+            title={"Статьи и новости"}
+            subTitle={"Оставайтесь всегда в курсе событий"}
+            btnTitle={"подробнее"}
+          />
+          <div className={styles["articles-and-news-card__list"]}>
+            {ARTICLES_AND_NEWS_CARD_DATA.map((item) => {
+              return (
+                <ArticleCard
+                  key={item.id}
+                  date={item.date}
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
                 />
               );
             })}

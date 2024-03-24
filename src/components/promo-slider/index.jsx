@@ -4,6 +4,7 @@ import iphone15ProImg from "./../../assets/images/promo-iphone-15pro.webp";
 import watchImg from "./../../assets/images/promo-watch.webp";
 import apleWatchUltraImg from "./../../assets/images/promo-watch-ultra.webp";
 import visionProImg from "./../../assets/images/promo-vision-pro.jpeg";
+import spirngSurprises from "./../../assets/images/promo-spring-suprises.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import clsx from "clsx";
 
@@ -64,6 +65,13 @@ const PromoSlider = () => {
           <img
             className={styles["swiper-slide-img"]}
             src={apleWatchUltraImg}
+            alt="iphone-15-pro"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className={styles["swiper-slide-img"]}
+            src={spirngSurprises}
             alt="iphone-15-pro"
           />
         </SwiperSlide>

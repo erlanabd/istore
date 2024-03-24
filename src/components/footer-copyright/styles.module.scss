@@ -1,0 +1,33 @@
+.footer-copyright {
+  height: 56px;
+  background-color: #2e2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  padding: 0 15px;
+}
+.links-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    color: #8f8f8f;
+  }
+  .link {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    color: #8f8f8f;
+    .white-text {
+      @extend .link;
+      font-weight: bold;
+      color: #f3f3f3;
+      margin-left: 3px;
+    }
+  }
+}
